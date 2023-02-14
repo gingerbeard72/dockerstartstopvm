@@ -1,14 +1,10 @@
 $rg = $env:rg
 
-$tenantId = "e5baac75-773b-4d69-a86e-c698458fbaba"
-$ApplicationId = "56fa1eca-fdb4-42f5-b6d4-6f7c28e6684d"
-# $ApplicationId = "10038af5-4c8a-44d6-a0ee-b85dbb737b4c"
-# $clientsecret = "Nd.8Q~802y6Ra_HX1zhH_Czruv6Iycs-oeJzsbZ."
-# $clientsecretid = "a959774c-3664-450f-a57e-bc065cd38489"
+$tenantId = "Your Tenanat ID"
+$ApplicationId = "Your SPN ID"
+$securePassword = " Your Password" | ConvertTo-SecureString -AsPlainText -Force
 
-$securePassword = "password" | ConvertTo-SecureString -AsPlainText -Force
-
-Connect-AzAccount -Subscription "740b9c7c-c9e4-4ca7-a8b1-7f86c65b259e" -TenantId $tenantId -ApplicationId $ApplicationId -CertificatePath './docker1.pfx' -CertificatePassword $securePassword
+Connect-AzAccount -Subscription "Your Subscription ID" -TenantId $tenantId -ApplicationId $ApplicationId -CertificatePath './docker1.pfx' -CertificatePassword $securePassword
 
 Write-Output "Logged in to Azure successfully using the service principle."
 Select-AzSubscription -TenantId $tenantId
