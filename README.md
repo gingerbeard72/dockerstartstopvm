@@ -1,5 +1,5 @@
-# dockerstartstopvm
-stop-start VM using a docker image and Service Principle. 
+# Docker Stop and Start all VM's 
+This project will Stop, wait, then Start all VM's individually using a docker image using a Service Principle. 
 
 This is designed to be used as and when required in a subscription. The image should be built with your tenant ID, Subscription ID and password included in the code (until I find time to make this more secure).
 
