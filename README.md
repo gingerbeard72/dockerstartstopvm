@@ -32,4 +32,4 @@ Execute the build command to create the docker image.
  
 Execute the run command to recycle all of the VM's in the named resource group. The command needs an environment variable included in the command to overwrite the default resource group name included in the Dockerfile
 
-  docker run -it -e rg=k8s startstopvm
+  docker run -it -e rg=yourresourcegroupname startstopvm
